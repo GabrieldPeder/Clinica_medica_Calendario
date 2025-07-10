@@ -1,30 +1,27 @@
-/* 1. Reset CSS e Variáveis */
-/* Um reset simples para remover estilos padrão dos navegadores */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Variáveis de cores e fontes para facilitar a manutenção */
 :root {
-    --primary-color: #4894FF;   /* Azul do botão "Ver endereço" */
-    --secondary-color: #FFB050; /* Laranja do botão "Ligar por vídeo" */
-    --bg-color: #F8F8F8;        /* Cinza claro do fundo da página */
-    --card-bg-color: #FFFFFF;   /* Branco dos cards */
-    --text-primary: #374151;    /* Cor principal do texto (nomes, etc) */
-    --text-secondary: #6B7280;  /* Cor secundária (subtítulos, etc) */
+    --primary-color: #4894FF;   
+    --secondary-color: #FFB050;
+    --bg-color: #F8F8F8;        
+    --card-bg-color: #FFFFFF;   
+    --text-primary: #374151;   
+    --text-secondary: #6B7280; 
     --font-family: 'Montserrat', sans-serif;
 }
 
-/* 2. Estilos Globais */
+
 body {
     background-color: var(--bg-color);
     font-family: var(--font-family);
     color: var(--text-primary);
 }
 
-/* 3. Estilos do Cabeçalho */
+
 .header {
     padding: 24px;
 }
@@ -51,7 +48,7 @@ body {
     color: var(--text-secondary);
 }
 
-/* 4. Estilos do Conteúdo Principal */
+
 .main-content {
     padding: 0 24px;
 }
@@ -61,7 +58,6 @@ body {
     margin-bottom: 16px;
 }
 
-/* 5. Estilos dos Cards de Consulta */
 .appointment-card {
     background-color: var(--card-bg-color);
     border-radius: 12px;
@@ -73,7 +69,7 @@ body {
 .card__header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center; 
     margin-bottom: 16px;
 }
 
@@ -123,10 +119,10 @@ body {
 
 .card__actions {
     display: flex;
-    gap: 16px; /* Espaçamento entre os botões */
+    gap: 16px; 
+
 }
 
-/* 6. Estilos dos Botões */
 .btn {
     width: 100%;
     padding: 14px;
