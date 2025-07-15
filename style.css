@@ -374,3 +374,77 @@ body {
         filter: brightness(0) invert(1);
     }
 }
+
+/* =================================================== */
+/* 12. FORMULÁRIO DE CADASTRO (DESKTOP)            */
+/* =================================================== */
+
+/* Por padrão (mobile), o formulário fica escondido. */
+.add-appointment-form-container {
+    display: none;
+}
+
+/* Regras para telas de desktop (1200px ou mais) */
+@media (min-width: 1200px) {
+
+    /* 1. Esconde o botão flutuante e seu container */
+    .fab-container {
+        display: none;
+    }
+
+    /* 2. Mostra e estiliza o container do formulário */
+    .add-appointment-form-container {
+        display: block;
+        grid-column: span 3; /* Faz o container ocupar as 3 colunas da grade */
+        margin-top: 40px;
+        padding: 24px;
+        background-color: var(--card-bg-color);
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .add-appointment-form-container .section-title {
+        margin-bottom: 24px;
+    }
+
+    /* 3. Estiliza o formulário */
+    .add-appointment-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-row {
+        display: flex;
+        gap: 20px;
+    }
+
+    .form-group {
+        flex: 1; /* Faz cada grupo de campo ocupar espaço igual */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        font-weight: 500;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #D1D5DB;
+        border-radius: 8px;
+        font-family: var(--font-family);
+        font-size: 16px;
+    }
+
+    /* Estiliza o botão dentro do formulário */
+    .add-appointment-form .btn {
+        max-width: 250px;
+        margin-left: auto; /* Alinha o botão à direita */
+    }
+}
