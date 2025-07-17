@@ -35,6 +35,8 @@ body {
     height: 48px;
     border-radius: 50%;
     margin-right: 16px;
+    /* AJUSTE: Garante que a imagem preencha o círculo sem distorcer */
+    object-fit: cover;
 }
 
 .header__greeting {
@@ -81,6 +83,8 @@ body {
     height: 40px;
     border-radius: 50%;
     margin-right: 12px;
+    /* AJUSTE: Garante que a imagem preencha o círculo sem distorcer */
+    object-fit: cover;
 }
 
 .card__patient-name {
@@ -268,6 +272,11 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Esconde o formulário em telas mobile */
+.add-appointment-form-container {
+    display: none;
+}
+
 @media (min-width: 768px) {
     body {
         font-size: clamp(14px, 1.5vw, 16px);
@@ -353,9 +362,10 @@ body {
         flex-direction: row;
         justify-content: flex-start;
         font-size: 16px;
-        padding: 12px 24px;
+        /* AJUSTE: Diminui o padding lateral para dar espaço ao texto */
+        padding: 12px 16px;
         gap: 12px;
-        border-radius: 10px;
+        border-radius: 8px;
         margin: 0;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
@@ -374,24 +384,15 @@ body {
     .nav__link--active img {
         filter: brightness(0) invert(1);
     }
-}
 
-.add-appointment-form-container {
-    display: none;
-}
-
-/* Regras para telas de desktop (1200px ou mais) */
-@media (min-width: 1200px) {
-
-    /* 1. Esconde o botão flutuante e seu container */
+    /* Esconde o FAB e mostra o formulário */
     .fab-container {
         display: none;
     }
 
-    /* 2. Mostra e estiliza o container do formulário */
     .add-appointment-form-container {
         display: block;
-        grid-column: span 3; /* Faz o container ocupar as 3 colunas da grade */
+        grid-column: span 3;
         margin-top: 40px;
         padding: 24px;
         background-color: var(--card-bg-color);
@@ -403,7 +404,6 @@ body {
         margin-bottom: 24px;
     }
 
-    /* 3. Estiliza o formulário */
     .add-appointment-form {
         display: flex;
         flex-direction: column;
@@ -416,7 +416,7 @@ body {
     }
 
     .form-group {
-        flex: 1; /* Faz cada grupo de campo ocupar espaço igual */
+        flex: 1;
         display: flex;
         flex-direction: column;
     }
@@ -438,9 +438,8 @@ body {
         font-size: 16px;
     }
 
-    /* Estiliza o botão dentro do formulário */
     .add-appointment-form .btn {
         max-width: 250px;
-        margin-left: auto; /* Alinha o botão à direita */
+        margin-left: auto;
     }
 }
