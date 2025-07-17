@@ -35,8 +35,8 @@ body {
     height: 48px;
     border-radius: 50%;
     margin-right: 16px;
-    /* AJUSTE: Garante que a imagem preencha o círculo sem distorcer */
     object-fit: cover;
+    object-position: center;
 }
 
 .header__greeting {
@@ -83,8 +83,8 @@ body {
     height: 40px;
     border-radius: 50%;
     margin-right: 12px;
-    /* AJUSTE: Garante que a imagem preencha o círculo sem distorcer */
     object-fit: cover;
+    object-position: center;
 }
 
 .card__patient-name {
@@ -272,7 +272,7 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Esconde o formulário em telas mobile */
+
 .add-appointment-form-container {
     display: none;
 }
@@ -302,6 +302,8 @@ body {
 
     .appointment-card {
         padding: 24px;
+        display: flex;
+        flex-direction: column;
     }
 
     .card__patient-avatar {
@@ -315,6 +317,7 @@ body {
 
     .card__actions {
         justify-content: flex-end;
+        margin-top: auto;
     }
 
     .btn {
@@ -362,8 +365,7 @@ body {
         flex-direction: row;
         justify-content: flex-start;
         font-size: 16px;
-        /* AJUSTE: Diminui o padding lateral para dar espaço ao texto */
-        padding: 12px 16px;
+        padding: 10px 14px;
         gap: 12px;
         border-radius: 8px;
         margin: 0;
